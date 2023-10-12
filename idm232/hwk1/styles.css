@@ -19,8 +19,6 @@ display: flex;
 justify-content: center; 
 align-items: center; 
 flex-direction: column;
-margin: 1rem;
-padding: 1rem;
 }
 
 .container {
@@ -87,9 +85,9 @@ p {
 header {
     border: #292525;
     text-align: center;
-    width: 90%;
-    margin: .25rem;
-    padding: .25rem;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 .hero {
@@ -282,6 +280,11 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+
+    body {
+       padding: 0rem;
+       margin: 0rem;
+    }
 
     figcaption {
         font-family: 'NoiretBlanc', cursive;
