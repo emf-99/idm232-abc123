@@ -82,6 +82,30 @@ p {
     padding: 20px;
 }
 
+.bg1 {
+    position: fixed; 
+    top: 55%;
+    left: 50%;
+    width: 50%; 
+    height: auto; 
+    z-index: -1; 
+    opacity: 10%; 
+    background-size: cover; 
+    background-repeat: repeat; 
+}
+
+.bg2 {
+    position: fixed; 
+    bottom: 50%;
+    right: 50%;
+    width: 50%; 
+    height: auto; 
+    z-index: -1; 
+    opacity: 10%; 
+    background-size: cover; 
+    background-repeat: repeat; 
+}
+
 header {
     border: #292525;
     text-align: center;
@@ -186,12 +210,12 @@ main {
 
 .recipe-thumbnails {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.row1, .row2, .row3 {
+    flex-basis: calc(33.33% - 20px); 
 }
 
 .oneRec {
@@ -239,8 +263,8 @@ footer {
 
 @media screen and (max-width: 1000px) {
         
-    .recipe-thumbnails {
-        grid-template-columns: repeat(2, 1fr);
+    .row1, .row2, .row3 {
+        flex-basis: calc(50% - 20px); 
     }
 
     .search-area input {
@@ -311,7 +335,11 @@ footer {
     }
 
     .recipe-thumbnails {
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column; 
+    }
+
+    .row1, .row2, .row3 {
+        flex-basis: 100%; 
     }
 
     .search-area input {
