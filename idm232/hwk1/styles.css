@@ -82,7 +82,7 @@ p {
     padding: 20px;
 }
 
-.bg1 {
+/* .bg1 {
     position: fixed; 
     top: 55%;
     left: 50%;
@@ -106,12 +106,17 @@ p {
     background-repeat: repeat; 
 }
 
+.bg3 {
+    visibility: hidden;
+} */
+
 header {
     border: #292525;
     text-align: center;
     width: 100%;
     margin: 0rem;
     padding: 0rem;
+    background-color: #ffffff;
 }
 
 .hero {
@@ -125,18 +130,12 @@ header {
     position: static;
 }
 
-/* .hero-image-container {
-    width: 100vw; 
-    height: 20rem;
-    position: relative;
-}*/
-
 .hero-image {
     width: 200rem; 
     height: auto;
 }
 
-.logo-container {
+/* .logo-container {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -146,7 +145,7 @@ header {
 .logo {
     width: 75rem; 
     height: auto;
-}
+} */
 
 .hero-image {
     max-width: 100%;
@@ -163,6 +162,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-bottom: #292525 .5px solid;
 }
 
 .search-area {
@@ -229,7 +229,7 @@ main {
 }
 
 .oneRec img {
-    max-width: 80%;
+    max-width: 120%;
     height: auto;
     border-radius: 50%;
 }
@@ -262,6 +262,10 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
+    header {
+        background-color: #ffffff;
+    }
         
     .row1, .row2, .row3 {
         flex-basis: calc(50% - 20px); 
@@ -289,11 +293,53 @@ footer {
         width: 150rem; 
         height: auto;
     }
+
+    .recipe-thumbnails {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 3fr);
+    }
     
+    /* .bg1 {
+        position: fixed; 
+        top: 30%;
+        left: 40%;
+        width: 60%;
+        height: auto;
+        z-index: -1;
+        opacity: 10%;
+        background-repeat: repeat; 
+    }
+    
+    .bg2 {
+        position: fixed; 
+        bottom: 70%;
+        right: 40%;
+        width: 60%;
+        height: auto;
+        z-index: -1;
+        opacity: 10%;
+        background-repeat: repeat; 
+    }
+
+    .bg3 {
+        visibility: visible;
+        position: fixed; 
+        bottom: -10%;
+        right: 40%;
+        width: 60%;
+        height: auto;
+        z-index: -1;
+        opacity: 10%;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
     .logo {
         width: 50rem; 
         height: auto;
-    }
+    } */
 
     .oneRec img {
         max-width: 150%;
@@ -304,6 +350,10 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+
+    header {
+        background-color: #ffffff;
+    }
 
     body {
        padding: 0rem;
@@ -365,9 +415,46 @@ footer {
         width: 150rem; 
         height: auto;
     }
+
+    /* .bg1 {
+    position: fixed;
+    top: 40%;
+    left: 10%;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    opacity: 10%;
+    background-size: cover;
+    background-repeat: repeat;
+    }
+    
+    .bg2 {
+    position: fixed;
+    bottom: 70%;
+    right: 10%;
+    width: 110%;
+    height: auto;
+    z-index: -1;
+    opacity: 10%;
+    background-size: cover;
+    background-repeat: repeat;
+    }
+    
+    .bg3 { 
+    visibility: visible;
+    position: fixed;
+    bottom: 0%;
+    right: 10%;
+    width: 110%;
+    height: auto;
+    z-index: -1;
+    opacity: 10%;
+    background-size: cover;
+    background-repeat: repeat;
+    } 
     
     .logo {
         width: 50rem; 
         height: auto;
-    }
+    } */
 }
