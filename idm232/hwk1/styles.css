@@ -143,18 +143,6 @@ header {
     height: auto;
 }
 
-/* .logo-container {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo {
-    width: 75rem; 
-    height: auto;
-} */
-
 .hero-image {
     max-width: 100%;
     height: auto;
@@ -262,6 +250,15 @@ main {
 
 .oneRec:hover figcaption{
     color: var(--color-accent);
+    transition: 0.1s ease-in-out 0.1s;
+}
+
+.oneRec img {
+    border: dotted 3.5px var(--color-screen);
+}
+
+.oneRec:hover img {
+    border: dotted 3.5px var(--color-accent);
     transition: 0.1s ease-in-out 0.1s;
 }
 
