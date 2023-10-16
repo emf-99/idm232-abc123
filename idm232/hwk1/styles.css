@@ -182,13 +182,21 @@ header {
 }
 
 .search-area button {
-    background-color: #FF0000;
+    background-color: var(--color-accent);
     color: white;
     border: none;
     border-radius: 5px;
     padding: 1rem 2rem;
     cursor: pointer;
 }
+
+.search-area button:hover {
+    background-color: var(--color-screen);
+    color: var(--color-accent);
+    border: solid 1px var(--color-accent);
+    transition: 0.3s ease-in-out 0.3s;
+}
+
 
 .filters {
     margin: 1rem;
@@ -204,27 +212,31 @@ header {
     margin-right: 1rem;
 }
 
+.filters label:hover {
+    color: var(--color-accent);
+    transition: 0.1s ease-in-out 0.1s;
+}
+
 main {
     margin-top: 1rem;
 }
 
 .recipe-thumbnails {
-    display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
-.row1, .row2, .row3 {
-    flex-basis: calc(33.33% - 20px); 
-}
 
 .oneRec {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: .5rem;
     text-align: center;
-   /* border: 1px solid #ccc;
-    border-radius: 25%; */
     padding: 1rem;
 }
 
@@ -237,6 +249,11 @@ main {
 .oneRec figcaption {
     text-align: center;
     margin-top: 10px;
+}
+
+.oneRec:hover figcaption{
+    color: var(--color-accent);
+    transition: 0.1s ease-in-out 0.1s;
 }
 
 footer {
@@ -266,10 +283,6 @@ footer {
     header {
         background-color: #ffffff;
     }
-        
-    .row1, .row2, .row3 {
-        flex-basis: calc(50% - 20px); 
-    }
 
     .search-area input {
         padding: 1rem 5rem;
@@ -295,51 +308,10 @@ footer {
     }
 
     .recipe-thumbnails {
-        display: flex;
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
-        flex-wrap: wrap;
-        grid-template-columns: repeat(2, 3fr);
+        align-items: center;
     }
-    
-    /* .bg1 {
-        position: fixed; 
-        top: 30%;
-        left: 40%;
-        width: 60%;
-        height: auto;
-        z-index: -1;
-        opacity: 10%;
-        background-repeat: repeat; 
-    }
-    
-    .bg2 {
-        position: fixed; 
-        bottom: 70%;
-        right: 40%;
-        width: 60%;
-        height: auto;
-        z-index: -1;
-        opacity: 10%;
-        background-repeat: repeat; 
-    }
-
-    .bg3 {
-        visibility: visible;
-        position: fixed; 
-        bottom: -10%;
-        right: 40%;
-        width: 60%;
-        height: auto;
-        z-index: -1;
-        opacity: 10%;
-        background-size: cover;
-        background-repeat: repeat;
-    }
-
-    .logo {
-        width: 50rem; 
-        height: auto;
-    } */
 
     .oneRec img {
         max-width: 150%;
@@ -349,7 +321,7 @@ footer {
     
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 720px) {
 
     header {
         background-color: #ffffff;
@@ -364,7 +336,7 @@ footer {
         font-family: 'NoiretBlanc', cursive;
         font-size: .6rem;
         color:  var(--color-text);
-        max-width: 200ch;
+        max-width: 100ch;
         letter-spacing: .05rem;
         line-height: 1.6;
         margin: .5rem;
@@ -379,17 +351,14 @@ footer {
         }
 
     .oneRec img {
-        max-width: 200%;
+        max-width: 120%;
         height: auto;
         border-radius: 50%;
     }
 
     .recipe-thumbnails {
         flex-direction: column; 
-    }
-
-    .row1, .row2, .row3 {
-        flex-basis: 100%; 
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .search-area input {
@@ -416,45 +385,4 @@ footer {
         height: auto;
     }
 
-    /* .bg1 {
-    position: fixed;
-    top: 40%;
-    left: 10%;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-    opacity: 10%;
-    background-size: cover;
-    background-repeat: repeat;
-    }
-    
-    .bg2 {
-    position: fixed;
-    bottom: 70%;
-    right: 10%;
-    width: 110%;
-    height: auto;
-    z-index: -1;
-    opacity: 10%;
-    background-size: cover;
-    background-repeat: repeat;
-    }
-    
-    .bg3 { 
-    visibility: visible;
-    position: fixed;
-    bottom: 0%;
-    right: 10%;
-    width: 110%;
-    height: auto;
-    z-index: -1;
-    opacity: 10%;
-    background-size: cover;
-    background-repeat: repeat;
-    } 
-    
-    .logo {
-        width: 50rem; 
-        height: auto;
-    } */
 }
