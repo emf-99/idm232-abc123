@@ -15,11 +15,17 @@
 
 body { 
 background-color: var(--color-screen);
+background-image: url(images/bg.png);
+background-size: cover;
+background-position: center center;
 display: flex; 
 justify-content: center; 
 align-items: center; 
 flex-direction: column;
+margin: 0;
+padding: 0;
 }
+
 
 .container {
     position: relative;
@@ -122,11 +128,13 @@ header {
 .hero {
     position: relative;
     overflow: hidden;
+    margin-top: 0; 
+    padding: 0; 
 }
 
 .hero-image-container {
     width: 100%;
-    height: auto;
+    height: 50%;
     position: static;
 }
 
@@ -150,6 +158,7 @@ header {
 .hero-image {
     max-width: 100%;
     height: auto;
+
 }
 
 .title {
@@ -334,7 +343,7 @@ footer {
 
     figcaption {
         font-family: 'NoiretBlanc', cursive;
-        font-size: .6rem;
+        font-size: 1rem;
         color:  var(--color-text);
         max-width: 100ch;
         letter-spacing: .05rem;
