@@ -47,8 +47,19 @@ color:  var(--color-text);
 max-width: 15ch;
 letter-spacing: .05rem;
 line-height: 1.6;
-margin: .5rem;
-padding: .5rem;
+margin: .25rem .25rem 0rem .25rem;
+padding: .5rem .5rem 0rem .5rem;;
+}
+
+.subCap {
+font-family: 'Karla', sans-serif;
+font-size: .75rem;
+color:  var(--color-text);
+max-width: 30ch;
+letter-spacing: .05rem;
+line-height: 1.6;
+margin: 0rem .25rem .25rem .25rem ;
+padding: 0rem .5rem .5rem .5rem;
 }
 
 button, input, .filters label {
@@ -88,34 +99,6 @@ p {
     padding: 20px;
 }
 
-/* .bg1 {
-    position: fixed; 
-    top: 55%;
-    left: 50%;
-    width: 50%; 
-    height: auto; 
-    z-index: -1; 
-    opacity: 10%; 
-    background-size: cover; 
-    background-repeat: repeat; 
-}
-
-.bg2 {
-    position: fixed; 
-    bottom: 50%;
-    right: 50%;
-    width: 50%; 
-    height: auto; 
-    z-index: -1; 
-    opacity: 10%; 
-    background-size: cover; 
-    background-repeat: repeat; 
-}
-
-.bg3 {
-    visibility: hidden;
-} */
-
 header {
     border: #292525;
     text-align: center;
@@ -152,6 +135,13 @@ header {
 .title {
     font-size: 36px;
     margin: 20px 0;
+}
+
+.subhead{
+    font-size: 1.25rem;
+    font-family: 'NoiretBlanc', cursive;
+    padding: .25rem;
+    margin: .25rem;
 }
 
 .search-filter-area {
@@ -259,7 +249,6 @@ main {
 
 .oneRec figcaption {
     text-align: center;
-    margin-top: 10px;
 }
 
 .oneRec:hover figcaption{
@@ -338,6 +327,13 @@ footer {
         padding: .25rem;
     }
 
+    .subhead{
+        font-size: 1rem;
+        font-family: 'NoiretBlanc', cursive;
+        padding: .25rem;
+        margin: .25rem;
+    }
+
     .search-area {
         margin: .5rem;
         padding: .5rem;
@@ -408,6 +404,13 @@ footer {
 
     .search-area input {
         padding: 1rem 2rem;
+    }
+
+    .subhead{
+        font-size: .75rem;
+        font-family: 'NoiretBlanc', cursive;
+        padding: .25rem;
+        margin: .25rem;
     }
 
     .search-area {
