@@ -12,6 +12,11 @@
     src: url('fonts/NOIRetBLANC.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Romie Italic';
+    src: url('fonts/RomieTrial-Regular-Italic.otf') format('opentype');
+}
+
 
 body { 
 background-color: var(--color-screen);
@@ -55,7 +60,7 @@ padding: .5rem .5rem 0rem .5rem;;
 font-family: 'Karla', sans-serif;
 font-size: .75rem;
 color:  var(--color-text);
-max-width: 30ch;
+max-width: 25ch;
 letter-spacing: .05rem;
 line-height: 1.6;
 margin: 0rem .25rem .25rem .25rem ;
@@ -139,7 +144,7 @@ header {
 
 .subhead{
     font-size: 1.25rem;
-    font-family: 'NoiretBlanc', cursive;
+    font-family: 'Romie Italic';
     padding: .25rem;
     margin: .25rem;
 }
@@ -150,6 +155,7 @@ header {
     justify-content: center;
     flex-direction: column;
     border-bottom: #292525 .5px solid;
+    border-top: #292525 .5px solid;
 }
 
 .search-area {
@@ -181,7 +187,7 @@ header {
     background-color: var(--color-screen);
     color: var(--color-accent);
     border: solid 1px var(--color-accent);
-    transition: 0.3s ease-in-out 0.3s;
+    transition: 0.4s ease-in-out 0.4s;
     cursor: pointer;
 }
 
@@ -239,6 +245,13 @@ main {
     margin: .5rem;
     text-align: center;
     padding: 1rem;
+
+    transition: transform 0.3s ease;
+    transform: translate(0, 0);
+}
+
+.oneRec:hover {
+    transform: translate(0, -5px);
 }
 
 .oneRec img {
@@ -253,7 +266,7 @@ main {
 
 .oneRec:hover figcaption{
     color: var(--color-accent);
-    transition: 0.1s ease-in-out 0.1s;
+    transition: 0.3s ease-in-out 0.3s;
     cursor: pointer;
 }
 
@@ -263,9 +276,11 @@ main {
 
 .oneRec:hover img {
     border: dotted 3.5px var(--color-accent);
-    transition: 0.1s ease-in-out 0.1s;
+    transition: 0.3s ease-in-out 0.3s;
     cursor: pointer;
+    
 }
+
 
 footer {
     background-color: var(--color-accent);
