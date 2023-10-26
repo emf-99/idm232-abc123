@@ -8,7 +8,7 @@
 
 }
 
-.filters label input[type="checkbox"]:not(:checked) {
+/* .filters label input[type="checkbox"]:not(:checked) {
     appearance: none;
     -webkit-appearance: none;
     background-color: var(--color-screen); 
@@ -31,7 +31,7 @@
 
   .search-area input[type="text"]:focus {
     outline: 1px solid var(--color-accent); 
-  }
+  } */
 
 @font-face {
     font-family: 'NoiretBlanc';
@@ -43,6 +43,35 @@
     src: url('fonts/RomieTrial-Regular-Italic.otf') format('opentype');
 }
 
+/* links */
+a.hover-link {
+    color: var(--color-accent); 
+    text-decoration: none; 
+}
+
+a.hover-link:hover {
+    color: var(--color-accent); 
+    text-decoration: underline; 
+}
+
+a:link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.back_button {
+    font-size: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 1rem;
+    margin: 1rem;
+}
 
 body { 
 background-color: var(--color-screen);
