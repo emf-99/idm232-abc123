@@ -46,8 +46,9 @@ a:visited {
     display: flex;
     align-items: start;
     justify-content: flex-start;
-    padding: .25rem;
-    margin: .25rem;
+    padding: .5rem;
+    margin: .5rem;
+    margin-left: 2rem;
 }
 
 body { 
@@ -326,6 +327,16 @@ footer {
         border-radius: 50%;
     }
 
+    .back_button {
+        font-size: 2rem;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        padding: .5rem;
+        margin: .5rem;
+        margin-left: .5rem;
+    }
+
     .ing img {
         max-width: 50%;
         height: auto;
@@ -363,6 +374,16 @@ footer {
     body {
        padding: 0rem;
        margin: 0rem;
+    }
+
+    .back_button {
+        font-size: 2rem;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        padding: .25rem;
+        margin: .25rem;
+        margin-left: .25rem;
     }
 
     .oneRec, .ing {
