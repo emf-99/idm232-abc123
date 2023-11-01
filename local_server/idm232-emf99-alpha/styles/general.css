@@ -1,0 +1,15 @@
+#content {
+    text-align: center;
+}
+
+figure img {
+ max-width: 100%;
+}
+
+.oneRec:nth-child(2n) {
+    background-color: aquamarine;
+}
+
+.oneRec:nth-child(2n + 1) {
+    background-color: beige;
+}
