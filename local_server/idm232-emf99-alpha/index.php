@@ -55,7 +55,7 @@
           } else {
             echo '<figure class="oneRecOdd">';
           }
-          echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
+          // echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
           echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
           echo '</figure>';
         }
@@ -64,8 +64,6 @@
         consoleMsg("QUERY ERROR");
       }
     ?>
-
-<img src="./images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png" alt="FPP Chicken Rice">
 
     </div>
 
