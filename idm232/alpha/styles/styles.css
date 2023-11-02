@@ -85,12 +85,16 @@ padding: .5rem .5rem 0rem .5rem;;
 .subCap {
 font-family: 'Karla', sans-serif;
 font-size: .75rem;
+text-align: center;
 color:  var(--color-text);
-max-width: 25ch;
+max-width: 30ch;
 letter-spacing: .05rem;
 line-height: 1.6;
 margin: 0rem .25rem .25rem .25rem ;
 padding: 0rem .5rem .5rem .5rem;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 button, input, .filters label {
@@ -229,7 +233,7 @@ header {
 .filters {
     margin: 1rem;
     padding: 1rem;
-    width: 75%;
+    max-width: 1001px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,7 +253,7 @@ header {
     align-items: center; 
     justify-content: center;
     margin: 0rem 1rem;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
     margin-right: 1rem;
 }
 
@@ -271,14 +275,23 @@ main {
     margin: 0 auto;
 }
 
+.recipe-thumbnail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+    margin: .5rem;
+}
+
 .oneRec {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: .5rem;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
 
     transition: transform 0.3s ease;
     transform: translate(0, 0);
@@ -289,7 +302,7 @@ main {
 }
 
 .oneRec img {
-    max-width: 120%;
+    max-width: 90%;
     height: auto;
     border-radius: 50%;
 }
@@ -348,26 +361,48 @@ footer {
         padding: 1rem 5rem;
     }
 
+
     .filters {
+        margin: 1rem;
+        padding: 1rem;
+        max-width: 1001px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .filtersCentered {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+
+    /* .filters {
         display: flex;
         justify-content: center; 
         align-items: center; 
         flex-wrap: wrap;
         flex-direction: column;
-        grid-template-columns: repeat(2,3fr);
+        grid-template-columns: repeat(2,3fr); 
         margin: 0.25rem;
         padding: 0.25rem;
-        width: 75%;
-    }
+        max-width: 75%;
+    } */
 
-    /*.filtersCentered {
+
+
+    /* .filtersCentered {
         display: flex;
         justify-content: center; 
         align-items: flex-start; 
         flex-wrap: wrap;
         flex-direction: column;
         grid-template-columns: repeat(1,3fr);
-    }*/
+        max-width: 1001px;
+    } */
 
     .filters label {
         display: flex;
@@ -406,7 +441,7 @@ footer {
     }
 
     .oneRec img {
-        max-width: 150%;
+        max-width: 100%;
         height: auto;
         border-radius: 50%;
     }
@@ -431,8 +466,8 @@ footer {
         max-width: 100ch;
         letter-spacing: .05rem;
         line-height: 1.6;
-        margin: .5rem;
-        padding: .5rem;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
         }
         
     button, input {
@@ -443,7 +478,7 @@ footer {
         }
 
     .oneRec img {
-        max-width: 120%;
+        min-width: 120%;
         height: auto;
         border-radius: 50%;
     }

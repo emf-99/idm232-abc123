@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>made with love</title>
 </head>
 <body>
@@ -43,6 +43,8 @@
             <div class="filters">
               <div class="filtersCentered">
                 <label><input type="checkbox" name="filter" value="beef"> Beef</label>
+                <label><input type="checkbox" name="filter" value="beef"> Steak</label>
+                <label><input type="checkbox" name="filter" value="beef"> Turkey</label>
                 <label><input type="checkbox" name="filter" value="chicken"> Chicken</label>
                 <label><input type="checkbox" name="filter" value="vegetarian"> Vegetarian</label>
                 <label><input type="checkbox" name="filter" value="chicken"> Pork</label>
@@ -58,31 +60,32 @@
         <div class="container">
 
             <div class="recipe-thumbnails">
+            
             <?php
-      // Get all the recipes from "recipes" table in the "idm232" database
-      $query = "SELECT * FROM recipes";
-      $results = mysqli_query($db_connection, $query);
-      if ($results->num_rows > 0) {
-        consoleMsg("Query successful! number of rows: $results->num_rows");
-        while ($oneRecipe = mysqli_fetch_array($results)) {
-          // echo '<h3>' .$oneRecipe['Title']. ' - '  . $oneRecipe['Cal/Serving']  .  '</h3>'; 
-          $id = $oneRecipe['id']; 
-            // convert line 56 like 72
-          echo '<figure class="oneRec">';
-          // like line 74
-          echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
-          // like line 75
-          echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
-          echo '</figure>';
-          // like line 77
-          echo '<figcaption class="subCap">' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
-          echo '</figure>';
-        }
+                // Get all the recipes from "recipes" table in the "idm232" database
+                $query = "SELECT * FROM recipes";
+                $results = mysqli_query($db_connection, $query);
+                if ($results->num_rows > 0) {
+                  consoleMsg("Query successful! number of rows: $results->num_rows");
+                  while ($oneRecipe = mysqli_fetch_array($results)) {
 
-      } else {
-        consoleMsg("QUERY ERROR");
-      }
-    ?>
+                    $id = $oneRecipe['id']; 
+                    echo '<div class="recipe-thumbnail">';
+                    
+                    echo '<figure class="oneRec">';
+                    echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
+                    echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
+                    echo '</figure>';
+                    echo '<figcaption class="subCap">' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
+                    echo '</figure>';
+                    
+                    echo '</div>';
+                  }
+
+                } else {
+                  consoleMsg("QUERY ERROR");
+                }
+            ?>
             </div>
         </div>
     </main>
@@ -93,6 +96,6 @@
         </div>
     </footer>
     
-    <script src="main.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
