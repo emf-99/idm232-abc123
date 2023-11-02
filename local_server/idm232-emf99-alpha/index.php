@@ -53,15 +53,17 @@
           // echo '<h3>' .$oneRecipe['Title']. ' - '  . $oneRecipe['Cal/Serving']  .  '</h3>'; 
           $id = $oneRecipe['id'];
           if ($id % 2 == 0) {
+            // convert line 56 like 72
             echo '<figure class="oneRec">';
           } else {
             echo '<figure class="oneRecOdd">';
           }
-          echo '<figcaption>' . $id . ' ' . $oneRecipe['Main IMG'] . '</figcaption>';
-          echo '</figure>';
-          // echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
+          // like line 74
+          echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
+          // like line 75
           echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
           echo '</figure>';
+          // like line 77
           echo '<figcaption>' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
           echo '</figure>';
         }
@@ -70,7 +72,11 @@
         consoleMsg("QUERY ERROR");
       }
     ?>
-
+ <figure class="oneRec">
+                    <img src="images/0101_2PM_Steak-Diane_97315_SQ Small.png" alt="Beef Medallions & Mushroom Sauce">
+                    <figcaption>Beef Medallions & Mushroom Sauce</figcaption>
+                    <figcaption class="subCap">with Mashed Potatoes</figcaption>
+                  </figure>
     </div>
 
 </body>
