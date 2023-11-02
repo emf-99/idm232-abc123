@@ -8,6 +8,8 @@
 
 <body>
 
+
+
 <?php
   // $msg = "HOWDY";
   // echo '<script type="text/javascript">console.log("'. $msg .'");</script>';
@@ -55,8 +57,12 @@
           } else {
             echo '<figure class="oneRecOdd">';
           }
+          echo '<figcaption>' . $id . ' ' . $oneRecipe['Main IMG'] . '</figcaption>';
+          echo '</figure>';
           // echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
           echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
+          echo '</figure>';
+          echo '<figcaption>' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
           echo '</figure>';
         }
 
