@@ -478,7 +478,7 @@ footer {
         }
 
     .oneRec img {
-        min-width: 120%;
+        min-width: 100%;
         height: auto;
         border-radius: 50%;
     }
