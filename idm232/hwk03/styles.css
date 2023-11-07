@@ -122,6 +122,12 @@ figcaption.ingList {
     padding: 0rem .5rem .5rem .5rem;
 }
 
+.ingImg {
+    min-width: 50%;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 15rem;
+}
 
 .time, figcaption.stepNum {
     font-family: 'Karla', sans-serif;
@@ -168,7 +174,22 @@ p {
     justify-content: center;
 }
 
-p.desc, figcaption.stepDesc {
+p.desc {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    color:  var(--color-text);
+    max-width: 50ch;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: .5rem;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+figcaption.stepDesc {
     font-family: 'Karla', sans-serif;
     font-size: 1rem;
     color:  var(--color-text);
@@ -268,11 +289,11 @@ footer {
 }
 
 .oneRec img {
-    min-width: 50%;
+    min-width: 40%;
     height: auto;
     border-radius: 50%;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 7rem;
     display: flex;
     align-items: flex-start;
 }
@@ -310,7 +331,7 @@ footer {
 @media screen and (min-width: 1500px) {
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1170px) {
 
     header {
         background-color: #ffffff;
@@ -325,6 +346,12 @@ footer {
         min-width: 50%;
         height: auto;
         border-radius: 50%;
+        margin: .25rem;
+    }
+
+    .text {
+        margin: .25rem;
+        padding: .25rem;
     }
 
     .back_button {
@@ -337,9 +364,11 @@ footer {
         margin-left: .5rem;
     }
 
-    .ing img {
+    .ingImg {
         max-width: 50%;
         height: auto;
+        padding: 1rem;
+        margin: 1rem;
     }
 
     .step img {
@@ -365,7 +394,7 @@ footer {
     
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 750px) {
 
     header {
         background-color: #ffffff;
@@ -411,7 +440,7 @@ footer {
         border-radius: 50%;
     }
 
-    .ing img {
+    .ingImg {
         min-width: 100%;
         height: auto;
     }
