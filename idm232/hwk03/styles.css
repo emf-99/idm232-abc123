@@ -215,7 +215,7 @@ figcaption.stepDesc {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; fix this */
 }
 
 .footer-container {
