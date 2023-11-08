@@ -42,7 +42,7 @@ a:visited {
 }
 
 .back_button {
-    font-size: 2rem;
+    font-size: 4rem;
     display: flex;
     align-items: start;
     justify-content: flex-start;
@@ -89,7 +89,7 @@ justify-content: center;
 
 figcaption.stepName {
 font-family: 'NoiretBlanc', cursive;
-font-size: 1.5rem;
+font-size: 2rem;
 text-align: center;
 color:  var(--color-text);
 letter-spacing: .05rem;
@@ -103,7 +103,7 @@ justify-content: center;
 
 .subCap {
 font-family: 'Karla', sans-serif;
-font-size: 1rem;
+font-size: 1.5rem;
 color:  var(--color-text);
 letter-spacing: .05rem;
 line-height: 1.6;
@@ -111,9 +111,23 @@ margin: 0rem .25rem .25rem .25rem ;
 padding: 0rem .5rem .5rem .5rem;
 }
 
+.ingListTitle{
+    font-family: 'NoiretBlanc', cursive;
+    font-size: 2rem;
+    text-align: left;
+    color: var(--color-text);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+
 figcaption.ingList {
     font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: left;
     color:  var(--color-text);
     letter-spacing: .05rem;
@@ -131,7 +145,7 @@ figcaption.ingList {
 
 .time, figcaption.stepNum {
     font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:  var(--color-accent);
     letter-spacing: .05rem;
     line-height: 1.6;
@@ -141,7 +155,7 @@ figcaption.ingList {
 
 .serving {
     font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:  var(--color-light);
     letter-spacing: .05rem;
     line-height: 1.6;
@@ -151,7 +165,7 @@ figcaption.ingList {
 
 .calories {
     font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:  var(--color-light);
     letter-spacing: .05rem;
     line-height: 1.6;
@@ -176,7 +190,7 @@ p {
 
 p.desc {
     font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:  var(--color-text);
     max-width: 50ch;
     letter-spacing: .05rem;
@@ -191,7 +205,7 @@ p.desc {
 
 figcaption.stepDesc {
     font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:  var(--color-text);
     max-width: 80ch;
     letter-spacing: .05rem;
@@ -385,11 +399,11 @@ footer {
         }
         
         figcaption.stepName {
-        font-size: 1rem;
+        font-size: 1.5rem;
         }
         
         .subCap, figcaption.ingList, .time, figcaption.stepNum, .serving, .calories, p, p.desc, figcaption.stepDesc {
-        font-size: .75rem;
+        font-size: 1.25rem;
         }
     
 }
@@ -463,11 +477,11 @@ footer {
         }
         
         figcaption.stepName {
-        font-size: 1rem;
+        font-size: 1.25rem;
         }
         
         .subCap, figcaption.ingList, .time, figcaption.stepNum, .serving, .calories, p, p.desc, figcaption.stepDesc {
-        font-size: .75rem;
+        font-size: 1rem;
         margin: 0rem 0.25rem 0.25rem 0.25rem;
         padding: 0rem 0.5rem 0.5rem 0.5rem;
         }
