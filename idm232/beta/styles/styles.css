@@ -195,7 +195,7 @@ p.desc {
     max-width: 50ch;
     letter-spacing: .05rem;
     line-height: 1.6;
-    margin: .5rem;
+    margin: .25rem;
     padding: .5rem;
     display: flex;
     align-items: center;
@@ -438,9 +438,13 @@ footer {
     }
 
     .oneRec img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
         border-radius: 50%;
+    }
+
+    .ingListTitle {
+        font-size: 1.5rem;
     }
 
     .hero-image {
@@ -455,7 +459,7 @@ footer {
     }
 
     .ingImg {
-        min-width: 100%;
+        max-width: 80%;
         height: auto;
     }
 

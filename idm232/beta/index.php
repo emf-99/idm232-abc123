@@ -55,27 +55,27 @@
                     
                       echo '<div class="text">';
                         echo '<div class="title">';
-                        echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
+                        echo '<figcaption>' . ' ' . $oneRecipe['Title'] . '</figcaption>';
                         echo '</div>';
 
                         echo '<div class="subTitle">';
-                        echo '<figcaption class="subCap">' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
+                        echo '<figcaption class="subCap">' . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
                         echo '</div>';
 
                         echo '<div class="timeEst">';
-                        echo '<figcaption class="time">' . $id . ' ' . $oneRecipe['Cook Time'] . '</figcaption>';
+                        echo '<figcaption class="time">' . ' ' . $oneRecipe['Cook Time'] . '</figcaption>';
                         echo '</div>';
 
                         echo '<div class="servingSize">';
-                        echo '<figcaption class="serving">' . $id . ' ' . $oneRecipe['Servings'] . '</figcaption>';
+                        echo '<figcaption class="serving">' . ' ' . $oneRecipe['Servings'] . ' servings </figcaption>';
                         echo '</div>';
 
                         echo '<div class="recDesc">';
-                        echo '<p class="desc">' . $id . ' ' . $oneRecipe['Description'] . '</p>';
+                        echo '<p class="desc">' . ' ' . $oneRecipe['Description'] . '</p>';
                         echo '</div>';
 
                         echo '<div class="caloriesPerserving">';
-                        echo '<figcaption class="calories">' . $id . ' ' . $oneRecipe['Cal/Serving'] . ' calories </figcaption>';
+                        echo '<figcaption class="calories">' . ' ' . $oneRecipe['Cal/Serving'] . ' calories </figcaption>';
                         echo '</div>';
                       echo '</div>';
                     echo '</figure>';
@@ -140,14 +140,14 @@
                     echo '<div class="ingredients">';
                     
                     echo '<figure class="ing">';
-                        echo '<img src="./images/' . $oneRecipe['Ingredients IMG'] . '" alt="Ingredients Image">';
+                    echo '<img class="ingImg" src="./images/ing/' . $oneRecipe['Ingredients IMG'] . '" alt="Ingredients Image">';
                     
                       echo '<div class="text">';
 
                       echo '<div class="ingList">';
                         echo '<figcaption class="ingListTitle">Ingredients</figcaption>';
                         $ingredientsWithBreaks = str_replace('*', '<br>', $oneRecipe['All Ingredients']);
-                        echo '<figcaption class="ingList">' . $id . ' ' . $ingredientsWithBreaks . '</figcaption>';
+                        echo '<figcaption class="ingList">' . ' ' . $ingredientsWithBreaks . '</figcaption>';
                         echo '</div>';
                       echo '</div>';
 
@@ -203,11 +203,11 @@
                     echo '<div class="steps">';
                     echo '<figure class="step">';
 
-                        echo '<img src="./images/' . $oneRecipe['Step IMGs'] . '" alt="Step Image">';
+                        // echo '<img src="./images/' . $oneRecipe['Step IMGs'] . '" alt="Step Image">';
                         // echo '<figcaption class="stepNum">' . $id . ' ' . $oneRecipe['All Ingredients'] . '</figcaption>';
                         // echo '<figcaption class="stepName">' . $id . ' ' . $oneRecipe['All Ingredients'] . '</figcaption>';
                         $stepsWithBreaks = str_replace('*', '<br>', $oneRecipe['All Steps']);
-                        echo '<figcaption class="stepDesc">' . $id . ' ' . $stepsWithBreaks . '</figcaption>';
+                        echo '<figcaption class="stepDesc">' . ' ' . $stepsWithBreaks . '</figcaption>';
 
                         
                     echo '</figure>';
