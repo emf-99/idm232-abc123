@@ -78,7 +78,7 @@
                     echo '</figure>';
                     echo '<figcaption class="subCap">' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
                     echo '</figure>';
-                    
+                  
                     echo '</div>';
                   }
 

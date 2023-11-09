@@ -1,0 +1,494 @@
+:root {
+    --color-screen: #ffffff;
+    --color-accent: #FF0000;
+    --color-text: #292525;
+    --color-light: #423e3e;
+    --color-highlight: #ff00006d;
+    --color-background:rgba(255, 255, 255, 0.512);;
+
+    --text: var(--color-text);
+
+}
+
+@font-face {
+    font-family: 'NoiretBlanc';
+    src: url('fonts/NOIRetBLANC.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Romie Italic';
+    src: url('fonts/RomieTrial-Regular-Italic.otf') format('opentype');
+}
+
+/* links */
+a.hover-link {
+    color: var(--color-accent); 
+    text-decoration: none; 
+}
+
+a.hover-link:hover {
+    color: var(--color-accent); 
+    text-decoration: underline; 
+}
+
+a:link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.back_button {
+    font-size: 4rem;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    padding: .5rem;
+    margin: .5rem;
+    margin-left: 2rem;
+}
+
+body { 
+background-color: var(--color-screen);
+background-image: url(images/bg.png);
+background-size: cover;
+background-position: center center;
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column;
+margin: 0;
+padding: 0;
+}
+
+/* fonts */
+h1 {
+font-family: 'NoiretBlanc', cursive;
+letter-spacing: .05rem;
+line-height: 1.6;
+margin: 1rem;
+padding: 1rem;
+}
+
+figcaption {
+font-family: 'NoiretBlanc', cursive;
+font-size: 2rem;
+text-align: left;
+color:  var(--color-text);
+letter-spacing: .05rem;
+line-height: 1.6;
+margin: .25rem .25rem 0rem .25rem;
+padding: .5rem .5rem 0rem .5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+figcaption.stepName {
+font-family: 'NoiretBlanc', cursive;
+font-size: 2rem;
+text-align: center;
+color:  var(--color-text);
+letter-spacing: .05rem;
+line-height: 1.6;
+margin: .25rem .25rem 0rem .25rem;
+padding: .5rem .5rem 0rem .5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.subCap {
+font-family: 'Karla', sans-serif;
+font-size: 1.25rem;
+color:  var(--color-text);
+letter-spacing: .05rem;
+line-height: 1.6;
+margin: 0rem .25rem .25rem .25rem ;
+padding: 0rem .5rem .5rem .5rem;
+}
+
+.ingListTitle{
+    font-family: 'NoiretBlanc', cursive;
+    font-size: 2rem;
+    text-align: left;
+    color: var(--color-text);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+
+figcaption.ingList {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    text-align: left;
+    color:  var(--color-text);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0rem .25rem .25rem .25rem ;
+    padding: 0rem .5rem .5rem .5rem;
+}
+
+.ingImg {
+    min-width: 50%;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 15rem;
+}
+
+.time, figcaption.stepNum {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-accent);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0rem .25rem .25rem .25rem ;
+    padding: 0rem .5rem .5rem .5rem;
+    }
+
+.serving {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-light);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0rem .25rem .25rem .25rem ;
+    padding: 0rem .5rem .5rem .5rem;
+    }
+
+.calories {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-light);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0rem .25rem .25rem .25rem ;
+    padding: 0rem .5rem .5rem .5rem;
+}
+
+
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    color:  var(--color-screen);
+    max-width: 80ch;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: .5rem;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.desc {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-text);
+    max-width: 50ch;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: .5rem;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+figcaption.stepDesc {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-text);
+    max-width: 80ch;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: .5rem;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; fix this */
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerOne, .containerTwo {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: .5px solid var(--color-accent);
+}
+
+.containerThree {
+    margin-bottom: 3rem;
+}
+
+header {
+    border: #292525;
+    text-align: center;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    background-color: #ffffff;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0; 
+    padding: 0; 
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 50%;
+    position: static;
+}
+
+.hero-image {
+    width: 200rem; 
+    height: auto;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+
+}
+
+main {
+    margin-top: .25rem;
+    background-color: var(--color-background);
+}
+
+.steps, .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+footer {
+    background-color: var(--color-accent);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+/* image and titles */
+.oneRec, .ing{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+
+.oneRec img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 7rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 30rem;
+    min-height: auto;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+
+/* Media queries for different screen widths */
+@media screen and (max-width: 1920px) {
+    main {
+        min-width: 90%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+}
+
+@media screen and (max-width: 1170px) {
+
+    header {
+        background-color: #ffffff;
+    }
+
+    .hero-image {
+        width: 150rem; 
+        height: auto;
+    }
+
+    .oneRec img {
+        min-width: 50%;
+        height: auto;
+        border-radius: 50%;
+        margin: .25rem;
+    }
+
+    .text {
+        margin: .25rem;
+        padding: .25rem;
+    }
+
+    .back_button {
+        font-size: 2rem;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        padding: .5rem;
+        margin: .5rem;
+        margin-left: .5rem;
+    }
+
+    .ingImg {
+        max-width: 50%;
+        height: auto;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .step img {
+        max-width: 75%;
+    }
+
+    .text {
+        min-width: auto;
+    }
+
+    figcaption {
+        font-family: 'NoiretBlanc', cursive;
+        font-size: 1.5rem;
+        }
+        
+        figcaption.stepName {
+        font-size: 1.5rem;
+        }
+        
+        .subCap, figcaption.ingList, .time, figcaption.stepNum, .serving, .calories, p, p.desc, figcaption.stepDesc {
+        font-size: 1rem;
+        }
+    
+}
+
+@media screen and (max-width: 750px) {
+
+    header {
+        background-color: #ffffff;
+    }
+
+    body {
+       padding: 0rem;
+       margin: 0rem;
+    }
+
+    .back_button {
+        font-size: 2rem;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        padding: .25rem;
+        margin: .25rem;
+        margin-left: .25rem;
+    }
+
+    .oneRec, .ing {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin: .25rem;
+    }
+
+    .oneRec img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .hero-image {
+        width: 150rem; 
+        height: auto;
+    }
+
+    .oneRec img {
+        min-width: 50%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .ingImg {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .step img {
+        max-width: 75%;
+        border-radius: 20%;
+    }
+
+    .text {
+        min-width: auto;
+        margin: .25rem;
+        padding: .25rem;
+    }
+
+    figcaption {
+        font-family: 'NoiretBlanc', cursive;
+        font-size: 1.5rem;
+        text-align: left;
+        }
+        
+        figcaption.stepName {
+        font-size: 1.25rem;
+        }
+        
+        .subCap, figcaption.ingList, .time, figcaption.stepNum, .serving, .calories, p, p.desc, figcaption.stepDesc {
+        font-size: .75rem;
+        margin: 0rem 0.25rem 0.25rem 0.25rem;
+        padding: 0rem 0.5rem 0.5rem 0.5rem;
+        }
+
+        .containerOne .containerTwo .containerThree {
+            margin: .25rem;
+            padding: .25rem;
+        }
+
+}
