@@ -63,7 +63,7 @@
             
             <?php
                 // Get all the recipes from "recipes" table in the "idm232" database
-                $query = "SELECT * FROM recipes";
+                $query = "SELECT * FROM recipes ORDER BY RAND() LIMIT 9";
                 $results = mysqli_query($db_connection, $query);
                 if ($results->num_rows > 0) {
                   consoleMsg("Query successful! number of rows: $results->num_rows");
@@ -74,9 +74,9 @@
                     
                     echo '<figure class="oneRec">';
                     echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
-                    echo '<figcaption>' . $id . ' ' . $oneRecipe['Title'] . '</figcaption>';
+                    echo '<figcaption>' . ' ' . $oneRecipe['Title'] . '</figcaption>';
                     echo '</figure>';
-                    echo '<figcaption class="subCap">' . $id . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
+                    echo '<figcaption class="subCap">' . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
                     echo '</figure>';
                   
                     echo '</div>';
