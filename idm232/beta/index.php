@@ -145,10 +145,18 @@
                       echo '<div class="text">';
 
                       echo '<div class="ingList">';
-                        echo '<figcaption class="ingListTitle">Ingredients</figcaption>';
-                        $ingredientsWithBreaks = str_replace('*', '<br>', $oneRecipe['All Ingredients']);
-                        echo '<figcaption class="ingList">' . ' ' . $ingredientsWithBreaks . '</figcaption>';
-                        echo '</div>';
+
+                            echo '<p class="allIng"> Ingredients: ' . $oneRecipe['All Ingredients']  .  '</p>'; 
+                            
+                            $ingredientsArray = explode("*", $oneRecipe['All Ingredients']);
+                            echo '<p class="ingArray"> Ingredients Array: ' . $ingredientsArray[1]  .  '</p>'; 
+
+                            echo '<figcaption class="ingListTitle"> Ingredients </figcaption>';
+                            echo '<ul class="ingList">';
+                            for($lp = 0; $lp < count($ingredientsArray); $lp++) {
+                              echo '<li>' . $ingredientsArray[$lp] . '</li>';
+                            }
+                            echo '<ul>';
                       echo '</div>';
 
                       echo '</div>';
@@ -160,33 +168,8 @@
                   consoleMsg("QUERY ERROR");
                 }
             ?>
+        </div>
 
-            <!-- <div class="ingredients">
-                <figure class="ing">
-
-                        <img class="ingImg" src="images/0101_ING_FPP_large_feature.png" alt="Ancho-Orange Chicken">
-                    
-                <div class="text">
-                    <div class="ingList">
-                        <figcaption class="ingListTitle">Ingredients</figcaption>
-                        <figcaption class="ingList">
-                            4 Boneless, Skinless Chicken Breasts <br>
-                            1 Lime <br>
-                            1 Tbsp Ancho Chile Paste <br>
-                            1 bunch Kale <br>
-                            2 Tbsps Butter <br>
-                            ¾ cup Jasmine Rice <br>
-                            2 cloves Garlic <br>
-                            2 Tbsps Crème Fraîche <br>
-                            4 Carrots <br>
-                            3 Tbsps Golden Raisins <br>
-                            1 Orange <br>
-                        </figcaption>
-                    </div>
-                </div>
-            </div>
-                 </figure>
-        </div> -->
 
         <div class="containerThree">
 
@@ -203,13 +186,22 @@
                     echo '<div class="steps">';
                     echo '<figure class="step">';
 
-                        // echo '<img src="./images/' . $oneRecipe['Step IMGs'] . '" alt="Step Image">';
-                        // echo '<figcaption class="stepNum">' . $id . ' ' . $oneRecipe['All Ingredients'] . '</figcaption>';
-                        // echo '<figcaption class="stepName">' . $id . ' ' . $oneRecipe['All Ingredients'] . '</figcaption>';
-                        $stepsWithBreaks = str_replace('*', '<br>', $oneRecipe['All Steps']);
-                        echo '<figcaption class="stepDesc">' . ' ' . $stepsWithBreaks . '</figcaption>';
-
+                        $stepTextArray = explode("*", $oneRecipe['All Steps']);
+                        echo '<p class="stepNumArray"> Number of Step Text: ' . count($stepTextArray) . '</p>';
                         
+                        $stepImagesArray = explode("*", $oneRecipe['Step IMGs']);
+                        echo '<p class="stepImgArray"> Number of Step Images: ' . count($stepImagesArray) . '</p>';   
+
+                        for($lp = 0; $lp < count($stepTextArray); $lp++) {
+                          // If step starts with a number, get number minus one for image name
+                          $firstChar = substr($stepTextArray[$lp],0,1);
+                          if (is_numeric($firstChar)) {
+                            consoleMsg("First Char is: $firstChar");
+                            echo '<img src="./images/stepImg/' . $stepImagesArray[$firstChar-1] . '" alt="Step Image">';
+                          }
+                          echo '<figcaption class="stepDesc">' . $stepTextArray[$lp] . '</figcaption>';
+                        }
+
                     echo '</figure>';
                     echo '</div>';
                   }
@@ -218,72 +210,6 @@
                   consoleMsg("QUERY ERROR");
                 }
             ?>
-        <
-
-        <!-- <div class="steps">
-            <figure class="step">
-                <img src="images/0101_FPP_Chicken-Rice_18594_WEB.png" alt="step 1">
-                <figcaption class="stepNum">1.</figcaption>
-                <figcaption class="stepName">Cook the rice:</figcaption>
-                <figcaption class="stepDesc">Place an oven rack in the center of the oven, then preheat to 450°F. 
-                    In a medium pot, <b>combine the rice,</b> a big pinch of salt, and 1 1/2 cups of water. Heat to boiling on high. Once boiling, 
-                    cover and reduce the heat to low. Cook 12 to 14 minutes, or until the water has been absorbed and the rice is tender. 
-                    Turn off the heat and fluff with a fork. Cover to keep warm.</figcaption>
-              </figure>
-
-              <figure class="step">
-                <img src="images/0101_FPP_Chicken-Rice_18622_WEB.png" alt="step 2">
-                <figcaption class="stepNum">2.</figcaption>
-                <figcaption class="stepName">Prepare the ingredients & make the glaze:</figcaption>
-                <figcaption class="stepDesc">While the rice cooks, wash and dry the fresh produce. Peel the carrots; quarter lengthwise, 
-                    then halve crosswise. Peel and roughly chop the garlic. Remove and discard the stems of the kale; finely chop the leaves. 
-                    Using a peeler, remove the lime rind, avoiding the white pith; mince to get 2 teaspoons of zest (or use a zester). 
-                    Halve the lime crosswise. Halve the orange; squeeze the juice into a bowl, 
-                    straining out any seeds. Whisk in the chile paste and 2 tablespoons of water until smooth.</figcaption>
-              </figure>
-
-              <figure class="step">
-                <img src="images/0101_FPP_Chicken-Rice_18626_WEB.png" alt="step 3">
-                <figcaption class="stepNum">3.</figcaption>
-                <figcaption class="stepName">Roast the carrots:</figcaption>
-                <figcaption class="stepDesc">Place the sliced carrots on a sheet pan. Drizzle with olive oil and season with salt and pepper; 
-                    toss to coat. Arrange in an even layer. 
-                    Roast 15 to 17 minutes, or until tender when pierced with a fork. Remove from the oven.</figcaption>
-              </figure>
-
-              <figure class="step">
-                <img src="images/0101_FPP_Chicken-Rice_18609_WEB.png" alt="step 4">
-                <figcaption class="stepNum">4.</figcaption>
-                <figcaption class="stepName">Cook the kale:</figcaption>
-                <figcaption class="stepDesc">While the carrots roast, in a large pan (nonstick, if you have one), heat 2 teaspoons of olive oil on medium-high until hot. 
-                    Add the chopped garlic and cook, stirring constantly, 30 seconds to 1 minute, or until fragrant. Add the chopped kale; 
-                    season with salt and pepper. Cook, stirring occasionally, 3 to 4 minutes, or until slightly wilted. Add 1/3 cup of water; 
-                    season with salt and pepper. Cook, stirring occasionally, 3 to 4 minutes, or until the kale has wilted and the water has 
-                    cooked off. Transfer to the pot of cooked rice. Stir to combine; 
-                    season with salt and pepper to taste. Cover to keep warm. Wipe out the pan.</figcaption>
-              </figure>
-
-              <figure class="step">
-                <img src="images/0101_FPP_Chicken-Rice_18639_WEB.png" alt="step 5">
-                <figcaption class="stepNum">5.</figcaption>
-                <figcaption class="stepName">Cook & glaze the chicken:</figcaption>
-                <figcaption class="stepDesc">While the carrots continue to roast, pat the chicken dry with paper towels; season with salt and pepper on both sides. 
-                    In the same pan, heat 2 teaspoons of olive oil on medium-high until hot. Add the seasoned chicken and cook 4 to 6 minutes on the first side, or until browned. 
-                    Flip and cook 2 to 3 minutes, or until lightly browned. Add the glaze and cook, frequently spooning the glaze over the chicken, 2 to 3 minutes, or until the chicken is coated and cooked through. 
-                    Turn off the heat; stir the butter and the juice of 1 lime half into the glaze until the butter has melted. 
-                    Season with salt and pepper to taste.</figcaption>
-              </figure>
-
-              <figure class="step">
-                <img src="images/0101_FPP_Chicken-Rice_18630_WEB.png" alt="step 6">
-                <figcaption class="stepNum">6.</figcaption>
-                <figcaption class="stepName">Finish the rice & serve your dish:</figcaption>
-                <figcaption class="stepDesc">To the pot of cooked rice and kale, add the lime zest, crème fraîche, raisins, and the juice of the remaining lime half. 
-                    Stir to combine; season with salt and pepper to taste. Serve the glazed chicken with the finished rice and roasted carrots. 
-                    Top the chicken with the remaining glaze from the pan. Enjoy! </figcaption>
-              </figure>
-
-        </div>  -->
 
         </div>
 

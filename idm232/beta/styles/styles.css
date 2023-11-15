@@ -113,7 +113,7 @@ padding: 0rem .5rem .5rem .5rem;
 
 .ingListTitle{
     font-family: 'NoiretBlanc', cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
     color: var(--color-text);
     letter-spacing: .05rem;
@@ -125,15 +125,27 @@ padding: 0rem .5rem .5rem .5rem;
     justify-content: flex-start;
     }
 
-figcaption.ingList {
+ul.ingList {
     font-family: 'Karla', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: left;
     color:  var(--color-text);
     letter-spacing: .05rem;
     line-height: 1.6;
     margin: 0rem .25rem .25rem .25rem ;
     padding: 0rem .5rem .5rem .5rem;
+}
+
+li {
+    margin: 0rem .25rem .25rem .25rem ;
+    padding: 0rem .5rem .5rem .5rem;
+}
+
+p.ingArray, p.allIng, p.stepNumArray, p.stepImgArray {
+    display: hidden;
+    padding: 0rem;
+    margin: 0rem;
+    font-size: .01rem;
 }
 
 .ingImg {
@@ -224,7 +236,7 @@ figcaption.stepDesc {
     justify-content: center;
 }
 
-.containerOne, .containerTwo {
+.containerOne {
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
@@ -233,6 +245,7 @@ figcaption.stepDesc {
 }
 
 .containerThree {
+    border-top: .5px solid var(--color-accent);
     margin-bottom: 3rem;
 }
 
@@ -313,9 +326,9 @@ footer {
 }
 
 .step img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
-    border-radius: 10%;
+    border-radius: 20%;
     padding: 1rem;
     margin: 1rem;
     display: flex;
