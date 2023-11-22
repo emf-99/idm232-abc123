@@ -70,17 +70,20 @@
                   while ($oneRecipe = mysqli_fetch_array($results)) {
 
                     $id = $oneRecipe['id']; 
-                    echo '<div class="recipe-thumbnail">';
+
+                    echo '<a href="/beta/index.php?recID=36">';
+                      echo '<div class="recipe-thumbnail">';
+                      
+                      echo '<figure class="oneRec">';
+                      echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
+                      echo '<figcaption>' . ' ' . $oneRecipe['Title'] . '</figcaption>';
+                      echo '</figure>';
+                      echo '<figcaption class="subCap">' . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
+                      echo '</figure>';
                     
-                    echo '<figure class="oneRec">';
-                    echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
-                    echo '<figcaption>' . ' ' . $oneRecipe['Title'] . '</figcaption>';
-                    echo '</figure>';
-                    echo '<figcaption class="subCap">' . ' ' . $oneRecipe['Subtitle'] . '</figcaption>';
-                    echo '</figure>';
-                  
-                    echo '</div>';
-                  }
+                      echo '</div>';
+                    echo '</a>';
+                    }
 
                 } else {
                   consoleMsg("QUERY ERROR");
