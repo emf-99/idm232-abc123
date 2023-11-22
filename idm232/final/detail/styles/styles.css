@@ -51,6 +51,11 @@ a:visited {
     margin-left: 2rem;
 }
 
+strong {
+    font-weight: normal;
+}
+
+
 body { 
 background-color: var(--color-screen);
 background-image: url(images/bg.png);
