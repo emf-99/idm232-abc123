@@ -58,7 +58,7 @@ strong {
 
 body { 
 background-color: var(--color-screen);
-background-image: url(images/bg.png);
+background-image: url(../images/bg.png);
 background-size: cover;
 background-position: center center;
 display: flex; 
@@ -229,10 +229,11 @@ figcaption.stepDesc {
     line-height: 1.6;
     margin: .5rem;
     padding: .5rem;
-    display: flex;
+    display: inline;
+    /*display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; fix this */
+     flex-direction: column; fix this */
 }
 
 .footer-container {

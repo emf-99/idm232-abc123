@@ -26,7 +26,9 @@
 
     <div class="hero">
         <div class="hero-image-container">
+        <a href="../index.php">
             <img src="images/headerWlogoHeart.png" alt="Hero Image" class="hero-image">
+          </a>
         </div>
     </div>
 

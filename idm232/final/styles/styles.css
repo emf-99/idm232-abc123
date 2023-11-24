@@ -46,7 +46,7 @@
 
 body { 
 background-color: var(--color-screen);
-background-image: url(images/bg.png);
+background-image: url(../images/bg.png);
 background-size: cover;
 background-position: center center;
 display: flex; 
@@ -494,7 +494,7 @@ footer {
     
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 710px) {
 
     header {
         background-color: #ffffff;
@@ -524,7 +524,7 @@ footer {
         }
 
     .oneRec img {
-        min-width: 100%;
+        max-width: 90%;
         height: auto;
         border-radius: 50%;
     }

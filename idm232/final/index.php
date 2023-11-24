@@ -26,8 +26,10 @@
     <header>
 
     <div class="hero">
-        <div class="hero-image-container">
+        <div class="hero-image-container" onclick="clearAllFilters()">
+          <a href="./index.php">
             <img src="images/headerWlogoHeart.png" alt="Hero Image" class="hero-image">
+          </a>
         </div>
     </div>
 
@@ -43,7 +45,7 @@
                 </form>
               </div>
             
-                <ul class="filters" id="filters">
+                <!-- <ul class="filters" id="filters">
                   <p>Click on a filter to select:</p>
                   <li><a href="index.php?filter=beef">Beef</a></li>
                   <li><a href="index.php?filter=steak">Steak</a></li>
@@ -53,7 +55,20 @@
                   <li><a href="index.php?filter=fish">Fish</a></li>
                   <li><a href="index.php?filter=vegitarian">Vegitarian</a></li>
                   <button class="clearAllButton"><a class="clear" href="index.php?filter">Clear</a></button>
-                </ul> 
+                </ul>  -->
+
+                <div class="filters" id="filters">
+              <div class="filtersCentered">
+                <label><input type="checkbox" name="filter" id="beef" value="beef"><a href="index.php?filter=beef" onclick="toggleCheckbox('beef')">Beef</a></label>
+                <label><input type="checkbox" name="filter" id="steak" value="steak"><a href="index.php?filter=steak" onclick="toggleCheckbox('steak')">Steak</a></label>
+                <label><input type="checkbox" name="filter" id="turkey" value="turkey"><a href="index.php?filter=turkey" onclick="toggleCheckbox('turkey')">Turkey</a></label>
+                <label><input type="checkbox" name="filter" id="chicken" value="chicken"><a href="index.php?filter=chicken" onclick="toggleCheckbox('chicken')">Chicken</a></label>
+                <label><input type="checkbox" name="filter" id="pork" value="pork"><a href="index.php?filter=pork" onclick="toggleCheckbox('pork')">Pork</a></label>
+                <label><input type="checkbox" name="filter" id="fish" value="fish"> <a href="index.php?filter=fish" onclick="toggleCheckbox('fish')">Fish</a></label>
+                <label><input type="checkbox" name="filter" id="vegitarian" value="vegetarian"><a href="index.php?filter=vegitarian" onclick="toggleCheckbox('vegitarian')">Vegitarian</a></label>
+                <button class="clearAllButton" onclick="clearAllFilters()">Clear</button>
+              </div>
+            </div>
             </div>
 
     </header>
@@ -86,7 +101,6 @@
                   consoleMsg("Loading ALL RECIPES");
                   $query = "SELECT * FROM recipes";
                 }
-
 
                 // $query = "SELECT * FROM recipes";
                 $results = mysqli_query($db_connection, $query);
