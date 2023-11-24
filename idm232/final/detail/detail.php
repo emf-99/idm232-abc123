@@ -25,14 +25,14 @@
     <header>
 
     <div class="hero">
-        <div class="hero-image-container">
+        <div class="hero-image-container" onclick="clearAllFilters()">
         <a href="../index.php">
             <img src="images/headerWlogoHeart.png" alt="Hero Image" class="hero-image">
           </a>
         </div>
     </div>
 
-    <a href="../index.php" class="back_button">←</a>
+    <a href="../index.php" class="back_button" onclick="clearAllFilters()">←</a>
     
     </header>
 
@@ -200,6 +200,6 @@
         </div>
     </footer>
     
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>

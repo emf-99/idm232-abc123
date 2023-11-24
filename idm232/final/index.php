@@ -111,7 +111,7 @@
                     $id = $oneRecipe['id']; 
 
                     echo '<a href="./detail/detail.php?recID='. $id .'">';
-                      echo '<div class="recipe-thumbnail">';
+                      echo '<div class="recipe-thumbnail" onclick="clearAllFilters()">';
                       
                       echo '<figure class="oneRec">';
                       echo '<img src="./images/' . $oneRecipe['Main IMG'] . '" alt="Dish Image">';
