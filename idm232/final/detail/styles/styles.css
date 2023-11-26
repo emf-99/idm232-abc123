@@ -135,6 +135,7 @@ ul.ingList {
     font-size: 1rem;
     text-align: left;
     color:  var(--color-text);
+    max-width: 30ch;
     letter-spacing: .05rem;
     line-height: 1.6;
     margin: 0rem .25rem .25rem .25rem ;

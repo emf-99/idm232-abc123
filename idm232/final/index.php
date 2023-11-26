@@ -65,7 +65,7 @@
                 <label><input type="checkbox" name="filter" id="chicken" value="chicken"><a href="index.php?filter=chicken" onclick="toggleCheckbox('chicken')">Chicken</a></label>
                 <label><input type="checkbox" name="filter" id="pork" value="pork"><a href="index.php?filter=pork" onclick="toggleCheckbox('pork')">Pork</a></label>
                 <label><input type="checkbox" name="filter" id="fish" value="fish"> <a href="index.php?filter=fish" onclick="toggleCheckbox('fish')">Fish</a></label>
-                <label><input type="checkbox" name="filter" id="vegitarian" value="vegetarian"><a href="index.php?filter=vegitarian" onclick="toggleCheckbox('vegitarian')">Vegitarian</a></label>
+                <label><input type="checkbox" name="filter" id="vegitarian" value="vegitarian"><a href="index.php?filter=vegitarian" onclick="toggleCheckbox('vegitarian')">Vegetarian</a></label>
                 <button class="clearAllButton" onclick="clearAllFilters()">Clear</button>
               </div>
             </div>
