@@ -41,7 +41,7 @@
                 <form action="index.php" method="POST">
                   <label for="search"> </label>
                   <input type="search" id="search" name="search">
-                  <button type="submit" name="submit" value="submit">Submit</button>
+                  <button type="submit" name="submit" value="submit" onclick="clearAllFilters()">Submit</button>
                 </form>
               </div>
             
@@ -93,7 +93,7 @@
                   consoleMsg("Doing a SEARCH");
                   // $query = "select * FROM recipes WHERE title LIKE '%{$search}%'";
                   $query = "select * FROM recipes WHERE title LIKE '%{$search}%' OR subtitle LIKE '%{$search}%'";
-                  $result = mysqli_query($connection, $query);
+                  // $result = mysqli_query($connection, $query);
                 } elseif (!empty($filter)) {
                   consoleMsg("Doing a FILTER");
                   $query = "select * FROM recipes WHERE proteine LIKE '%{$filter}%'";
@@ -104,6 +104,8 @@
 
                 // $query = "SELECT * FROM recipes";
                 $results = mysqli_query($db_connection, $query);
+                // consoleMsg("The number of records found is:");
+                // echo $results;
                 if ($results->num_rows > 0) {
                   consoleMsg("Query successful! number of rows: $results->num_rows");
                   while ($oneRecipe = mysqli_fetch_array($results)) {
@@ -126,6 +128,9 @@
 
                 } else {
                   consoleMsg("QUERY ERROR");
+                  echo '<div class="noResults">';
+                  echo '<h1 class="NoResultsMsg"> ' . 'No results found for: "' . $search . '"</h1>';
+                  echo '</div>';
                 }
             ?>
             </div>
