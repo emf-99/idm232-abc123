@@ -175,8 +175,12 @@
                           if (is_numeric($firstChar)) {
                             consoleMsg("First Char is: $firstChar");
                             echo '<img src="./images/stepImg/' . $stepImagesArray[$firstChar-1] . '" alt="Step Image">';
+                            
+                            echo '<span class="step-number">' . $firstChar . '.</span> ';
                           }
-                          echo '<figcaption class="stepDesc">' . $stepTextArray[$lp] . '</figcaption>';
+                              // Check if the first character is numeric before adding a period
+                            $stepDesc = is_numeric($firstChar) ? substr($stepTextArray[$lp], 1) : $stepTextArray[$lp];
+                            echo '<figcaption class="stepDesc">' . $stepDesc . '</figcaption>';
                         }
 
                     echo '</figure>';
