@@ -150,6 +150,24 @@ margin: .5rem;
 padding: .5rem;
 }
 
+.noResults {
+    display: grid;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.NoResultsMsg {
+    font-family: 'NoiretBlanc', cursive;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center; /* Center text */
+}
+
 li::marker {
     display: none;
 }
@@ -407,6 +425,19 @@ footer {
         padding: 1rem 5rem;
     }
 
+    body { 
+        background-color: var(--color-screen);
+        background-image: url(../images/bg.png);
+        background-size: auto;
+        background-position: center center;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        }
+
 
     .filters {
         margin: 1rem;
@@ -481,10 +512,23 @@ footer {
     }
 
     .recipe-thumbnails {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         justify-content: center;
-        align-items: center;
+        align-items: start;
     }
+
+    figcaption {
+        font-family: 'NoiretBlanc', cursive;
+        font-size: 1rem;
+        color:  var(--color-text);
+        max-width: 200ch;
+        letter-spacing: .05rem;
+        line-height: 1.6;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
+        } 
+        
+        
 
     .oneRec img {
         max-width: 100%;
@@ -494,7 +538,7 @@ footer {
     
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 750px) {
 
     header {
         background-color: #ffffff;
@@ -503,13 +547,23 @@ footer {
     body {
        padding: 0rem;
        margin: 0rem;
+        background-color: var(--color-screen);
+        background-image: url(../images/bg.png);
+        background-size: auto;
+        background-position: center center;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
 
     figcaption {
         font-family: 'NoiretBlanc', cursive;
         font-size: 1rem;
         color:  var(--color-text);
-        max-width: 100ch;
+        /* max-width: 100ch; */
         letter-spacing: .05rem;
         line-height: 1.6;
         margin: 0.5rem 0.5rem 0rem 0.5rem;
