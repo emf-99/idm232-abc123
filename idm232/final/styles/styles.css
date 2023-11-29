@@ -455,31 +455,7 @@ footer {
         align-items: center;
         justify-content: space-between;
     }
-    
 
-    /* .filters {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        flex-wrap: wrap;
-        flex-direction: column;
-        grid-template-columns: repeat(2,3fr); 
-        margin: 0.25rem;
-        padding: 0.25rem;
-        max-width: 75%;
-    } */
-
-
-
-    /* .filtersCentered {
-        display: flex;
-        justify-content: center; 
-        align-items: flex-start; 
-        flex-wrap: wrap;
-        flex-direction: column;
-        grid-template-columns: repeat(1,3fr);
-        max-width: 1001px;
-    } */
 
     .filters label {
         display: flex;

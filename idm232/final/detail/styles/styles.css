@@ -107,6 +107,13 @@ justify-content: center;
 }
 
 .step-number {
+    /* font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-accent);
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 0rem .25rem .25rem .25rem ;
+    padding: 0rem .5rem .5rem .5rem; */
     font-family: 'NoiretBlanc', cursive;
     font-size: 2rem;
     text-align: center;
@@ -115,10 +122,29 @@ justify-content: center;
     line-height: 1.6;
     margin: .25rem .25rem 0rem .25rem;
     padding: .5rem .5rem 0rem .5rem;
-    /* display: flex;
+     display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center; 
     }
+
+    hr.line {
+        border: 1px solid var(--color-accent);
+        height: 1px;
+        width: 300px;
+    }
+
+    .line:first-of-type {
+        display: none;
+    }
+    
+    img:first-child + img + .line {
+        display: block; 
+    }
+    
+    img:last-child + .line {
+        display: block; 
+    }
+
 
 .subCap {
 font-family: 'Karla', sans-serif;

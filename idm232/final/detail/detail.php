@@ -174,6 +174,7 @@
                           $firstChar = substr($stepTextArray[$lp],0,1);
                           if (is_numeric($firstChar)) {
                             consoleMsg("First Char is: $firstChar");
+                            echo '<hr class="line">';
                             echo '<img src="./images/stepImg/' . $stepImagesArray[$firstChar-1] . '" alt="Step Image">';
                             
                             echo '<span class="step-number">' . $firstChar . '.</span> ';
