@@ -57,21 +57,37 @@
                   <button class="clearAllButton"><a class="clear" href="index.php?filter">Clear</a></button>
                 </ul>  -->
 
+                                <!-- <label><input type="radio" name="filter" id="beef" value="beef"><a href="index.php?filter=beef">Beef</a></label>
+                <label><input type="radio" name="filter" id="steak" value="steak"><a href="index.php?filter=steak">Steak</a></label>
+                <label><input type="radio" name="filter" id="turkey" value="turkey"><a href="index.php?filter=turkey">Turkey</a></label>
+                <label><input type="radio" name="filter" id="chicken" value="chicken"><a href="index.php?filter=chicken">Chicken</a></label>
+                <label><input type="radio" name="filter" id="pork" value="pork"><a href="index.php?filter=pork">Pork</a></label>
+                <label><input type="radio" name="filter" id="fish" value="fish"> <a href="index.php?filter=fish">Fish</a></label>
+                <label><input type="radio" name="filter" id="vegitarian" value="vegitarian"><a href="index.php?filter=vegitarian">Vegetarian</a></label> -->
+
+                <!-- <button class="filterBtn"><name="filter" id="beef" value="beef"><a href="index.php?filter=beef" class="btnText">Beef</a></button>
+                <button class="filterBtn"><name="filter" id="steak" value="steak"><a href="index.php?filter=steak" class="btnText">Steak</a></button>
+                <button class="filterBtn"><name="filter" id="turkey" value="turkey"><a href="index.php?filter=turkey" class="btnText">Turkey</a></button>
+                <button class="filterBtn"><name="filter" id="chicken" value="chicken"><a href="index.php?filter=chicken" class="btnText">Chicken</a></button>
+                <button class="filterBtn"><name="filter" id="pork" value="pork"><a href="index.php?filter=pork" class="btnText">Pork</a></button>
+                <button class="filterBtn"><name="filter" id="fish" value="fish"> <a href="index.php?filter=fish" class="btnText">Fish</a></button>
+                <button class="filterBtn"><name="filter" id="vegitarian" value="vegitarian"><a href="index.php?filter=vegitarian" class="btnText">Vegetarian</a></button> -->
+
                 <div class="filters" id="filters">
               <div class="filtersCentered">
-                <label><input type="checkbox" name="filter" id="beef" value="beef"><a href="index.php?filter=beef" onclick="toggleCheckbox('beef')">Beef</a></label>
-                <label><input type="checkbox" name="filter" id="steak" value="steak"><a href="index.php?filter=steak" onclick="toggleCheckbox('steak')">Steak</a></label>
-                <label><input type="checkbox" name="filter" id="turkey" value="turkey"><a href="index.php?filter=turkey" onclick="toggleCheckbox('turkey')">Turkey</a></label>
-                <label><input type="checkbox" name="filter" id="chicken" value="chicken"><a href="index.php?filter=chicken" onclick="toggleCheckbox('chicken')">Chicken</a></label>
-                <label><input type="checkbox" name="filter" id="pork" value="pork"><a href="index.php?filter=pork" onclick="toggleCheckbox('pork')">Pork</a></label>
-                <label><input type="checkbox" name="filter" id="fish" value="fish"> <a href="index.php?filter=fish" onclick="toggleCheckbox('fish')">Fish</a></label>
-                <label><input type="checkbox" name="filter" id="vegitarian" value="vegitarian"><a href="index.php?filter=vegitarian" onclick="toggleCheckbox('vegitarian')">Vegetarian</a></label>
-                <button class="clearAllButton" onclick="clearAllFilters()">Clear</button>
+                <button class="filterBtn" id="beef" value="beef" onclick="handleFilterClick(this)"><a href="index.php?filter=beef" class="btnText">Beef</a></button>
+                <button class="filterBtn" id="steak" value="steak" onclick="handleFilterClick(this)"><a href="index.php?filter=steak" class="btnText">Steak</a></button>
+                <button class="filterBtn" id="turkey" value="turkey" onclick="handleFilterClick(this)"><a href="index.php?filter=turkey" class="btnText">Turkey</a></button>
+                <button class="filterBtn" id="chicken" value="chicken" onclick="handleFilterClick(this)"><a href="index.php?filter=chicken" class="btnText">Chicken</a></button>
+                <button class="filterBtn" id="pork" value="pork" onclick="handleFilterClick(this)"><a href="index.php?filter=pork" class="btnText">Pork</a></button>
+                <button class="filterBtn" id="fish" value="fish" onclick="handleFilterClick(this)"> <a href="index.php?filter=fish" class="btnText">Fish</a></button>
+                <button class="filterBtn" id="vegitarian" value="vegitarian" onclick="handleFilterClick(this)"><a href="index.php?filter=vegitarian" class="btnText">Vegetarian</a></button>
+                <button class="clearAllButton" onclick="clearFilters()">Clear</button>
               </div>
             </div>
             </div>
 
-    </header>
+</header>
 
     <main>
         <div class="container">

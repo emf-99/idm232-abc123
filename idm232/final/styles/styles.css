@@ -138,6 +138,46 @@ margin: .5rem;
 padding: .5rem;
 }
 
+.filterBtn {
+font-family: 'Karla', sans-serif;
+font-size: 1rem;
+color: var(--color-accent);
+max-width: 80ch;
+letter-spacing: .05rem;
+line-height: 1.6;
+margin: .5rem;
+padding: 1rem;
+background-color: var(--color-screen);
+border: 1px solid var(--color-accent);
+border-radius: 50px;
+cursor: pointer;
+transition: 0.3s ease-in-out 0.3s;
+}
+
+a.btnText {
+    color: var(--color-accent);
+}
+
+.filterBtn:hover {
+    transform: translate(0, -5px);
+    transition: 0.3s ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+/* .activeFilter {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    color: var(--color-screen);
+    max-width: 80ch;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    background-color: var(--color-highlight);
+    border: 1px solid var(--color-accent);
+    border-radius: 50px;
+    cursor: pointer;
+} */
+
+
 li {
 font-family: 'Karla', sans-serif;
 text-decoration: none;
@@ -272,7 +312,7 @@ header {
     background-color: var(--color-accent);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     padding: 1rem 2rem;
     cursor: pointer;
 }
@@ -514,7 +554,7 @@ footer {
     
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 820px) {
 
     header {
         background-color: #ffffff;
@@ -551,6 +591,20 @@ footer {
         max-width: 200ch;
         margin: .5rem;
         padding: .5rem;
+        }
+
+        .clearAllButton, .search-area button {
+            padding: .75rem 1.75rem;
+            font-size: .75rem;
+        }
+
+        .filterBtn {
+            padding: .75rem;
+            font-size: .75rem;
+        }
+
+        a.btnText {
+            font-size: .75rem;
         }
 
     .oneRec img {
@@ -598,12 +652,12 @@ footer {
     }
 
     .filtersCentered {
-        display: flex;
+        display: grid;
         justify-content: center; 
         align-items: flex-start; 
         flex-wrap: wrap;
         flex-direction: column;
-        grid-template-columns: repeat(1,3fr);
+        grid-template-columns: repeat(2,3fr);
     }
 
     .filters label {
