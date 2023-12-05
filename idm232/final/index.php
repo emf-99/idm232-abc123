@@ -113,6 +113,9 @@
                 } elseif (!empty($filter)) {
                   consoleMsg("Doing a FILTER");
                   $query = "select * FROM recipes WHERE proteine LIKE '%{$filter}%'";
+                  echo '<div class="results">';
+                  echo '<h1 class="resultsMsg"> ' . $filter . ' </h1>';
+                  echo '</div>';
                 } else {
                   consoleMsg("Loading ALL RECIPES");
                   $query = "SELECT * FROM recipes";
@@ -129,6 +132,7 @@
                     $id = $oneRecipe['id']; 
 
                     echo '<a href="./detail/detail.php?recID='. $id .'">';
+
                       echo '<div class="recipe-thumbnail" onclick="clearAllFilters()">';
                       
                       echo '<figure class="oneRec">';
@@ -140,7 +144,7 @@
                     
                       echo '</div>';
                     echo '</a>';
-                    }
+                    } 
 
                 } else {
                   consoleMsg("QUERY ERROR");

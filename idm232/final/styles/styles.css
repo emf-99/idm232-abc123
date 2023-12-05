@@ -199,7 +199,25 @@ padding: .5rem;
     width: 100%;
 }
 
+.results {
+    display: grid;
+    grid-column: 1 / -1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
 .NoResultsMsg {
+    font-family: 'NoiretBlanc', cursive;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center; /* Center text */
+}
+
+.resultsMsg {
     font-family: 'NoiretBlanc', cursive;
     letter-spacing: .05rem;
     line-height: 1.6;
