@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>made with love</title>
-    <link rel="icon" type="image/x-icon" src="images/favicon.ico">
 </head>
 <body>
 
@@ -123,6 +122,10 @@
                   consoleMsg("QUERY ERROR");
                   echo '<div class="noResults">';
                   echo '<h1 class="NoResultsMsg"> ' . 'No results found for: "' . $search . '"</h1>';
+                  echo '</div>';
+
+                  echo '<div class="noResultsImg">';
+                  echo '<img src="images/noResults.png" alt="no results" class="noResultsIcon">';
                   echo '</div>';
                 }
             ?>
