@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <a href="../index.php" class="back_button" onclick="clearAllFilters()">←</a>
+    <a href="javascript:void(0);" class="back_button" onclick="goBack()">←</a>
     
     </header>
 
@@ -197,7 +197,7 @@
 
     </main>
 
-    <a href="../index.php" class="back_button">←</a>
+    <a href="javascript:void(0);" class="back_button" onclick="goBack()">←</a>
 
     <footer>
         <div class="footer-container">
@@ -205,6 +205,15 @@
         </div>
     </footer>
     
+
+
+<script>
+  
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
     <!-- <script src="main.js"></script> -->
 </body>
 </html>
