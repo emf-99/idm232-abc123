@@ -18,7 +18,6 @@ body {
     flex-direction: column;
     margin: 1rem; 
     padding: 1rem; 
-        background-color: var(--color-screen);
         background-image: url(../images/bg.png);
         background-size: cover;
         background-position: center center; 
@@ -27,6 +26,8 @@ body {
 
 div.text {
     background-color: var(--color-bg);
+    margin: .5rem;
+    padding: .5rem;
 }
 
 /* fonts */
@@ -98,12 +99,12 @@ a:visited {
 }
 
 img {
-  max-width: 100%;
-  padding: .5rem;
-  margin: .5rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+    max-width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: block; /* Added this property */
+    margin-left: auto; /* Added these two properties for centering */
+    margin-right: auto;
 }
 
 @font-face {
